@@ -1,0 +1,19 @@
+{
+  "organisation": "Acme Energy (sample)",
+  "today": "2026-11-13",
+  "qDay": 2035,
+  "assets": [
+    { "id": "A1", "system": "Customer portal TLS", "usage": "tls", "algorithm": "ECDH-P256", "confidentialityYears": 3, "migrationYears": 1, "agile": true },
+    { "id": "A2", "system": "Site-to-site VPN to plants", "usage": "vpn", "algorithm": "RSA-2048", "confidentialityYears": 15, "migrationYears": 3, "critical": true, "vendorControlled": true },
+    { "id": "A3", "system": "Grid telemetry archive encryption keys", "usage": "storage", "algorithm": "RSA-2048", "confidentialityYears": 25, "migrationYears": 4, "critical": true },
+    { "id": "A4", "system": "Backup encryption", "usage": "backup", "algorithm": "AES-128", "confidentialityYears": 20, "migrationYears": 1 },
+    { "id": "A5", "system": "Substation controller firmware signing", "usage": "firmware-signing", "algorithm": "ECDSA-P256", "confidentialityYears": 0, "migrationYears": 5, "critical": true, "vendorControlled": true },
+    { "id": "A6", "system": "Internal root CA", "usage": "pki", "algorithm": "RSA-4096", "confidentialityYears": 10, "migrationYears": 3, "critical": true, "validUntil": "2040-06-01" },
+    { "id": "A7", "system": "Admin SSH", "usage": "ssh", "algorithm": "Ed25519", "confidentialityYears": 1, "migrationYears": 1, "agile": true },
+    { "id": "A8", "system": "Legacy HR export", "usage": "email", "algorithm": "3DES", "confidentialityYears": 7, "migrationYears": 1 },
+    { "id": "A9", "system": "Mobile API tokens", "usage": "jwt", "algorithm": "RSA-2048", "confidentialityYears": 0, "migrationYears": 1, "agile": true },
+    { "id": "A10", "system": "Edge gateway (vendor X)", "usage": "tls", "algorithm": "X25519MLKEM768", "confidentialityYears": 10, "migrationYears": 1, "agile": true },
+    { "id": "A11", "system": "Meter firmware channel", "usage": "iot", "algorithm": "ML-DSA-65", "migrationYears": 1 },
+    { "id": "A12", "system": "Legacy file transfer", "usage": "api", "algorithm": "FROBNICATE-9", "confidentialityYears": 5, "needsInput": true }
+  ]
+}

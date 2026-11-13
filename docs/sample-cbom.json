@@ -1,0 +1,216 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-13T00:00:00Z",
+    "component": {
+      "type": "application",
+      "name": "Acme Energy (sample)"
+    }
+  },
+  "components": [
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/rsa-2048",
+      "name": "RSA-2048",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "classicalSecurityLevel": 112,
+          "nistQuantumSecurityLevel": 0
+        }
+      },
+      "properties": [
+        {
+          "name": "pqc:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "pqc:usedBy",
+          "value": "Grid telemetry archive encryption keys (storage); Site-to-site VPN to plants (vpn); Mobile API tokens (jwt)"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ecdsa-p256",
+      "name": "ECDSA-P256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0
+        }
+      },
+      "properties": [
+        {
+          "name": "pqc:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "pqc:usedBy",
+          "value": "Substation controller firmware signing (firmware-signing)"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/rsa-4096",
+      "name": "RSA-4096",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "pke",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0
+        }
+      },
+      "properties": [
+        {
+          "name": "pqc:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "pqc:usedBy",
+          "value": "Internal root CA (pki)"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/3des",
+      "name": "3DES",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "classicalSecurityLevel": 80
+        }
+      },
+      "properties": [
+        {
+          "name": "pqc:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "pqc:usedBy",
+          "value": "Legacy HR export (email)"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ecdh-p256",
+      "name": "ECDH-P256",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "key-agree",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0
+        }
+      },
+      "properties": [
+        {
+          "name": "pqc:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "pqc:usedBy",
+          "value": "Customer portal TLS (tls)"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ed25519",
+      "name": "Ed25519",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature",
+          "classicalSecurityLevel": 128,
+          "nistQuantumSecurityLevel": 0
+        }
+      },
+      "properties": [
+        {
+          "name": "pqc:quantumVulnerable",
+          "value": "true"
+        },
+        {
+          "name": "pqc:usedBy",
+          "value": "Admin SSH (ssh)"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/aes-128",
+      "name": "AES-128",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "block-cipher",
+          "classicalSecurityLevel": 128
+        }
+      },
+      "properties": [
+        {
+          "name": "pqc:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "pqc:usedBy",
+          "value": "Backup encryption (backup)"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/x25519mlkem768",
+      "name": "X25519MLKEM768",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "kem",
+          "classicalSecurityLevel": 128
+        }
+      },
+      "properties": [
+        {
+          "name": "pqc:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "pqc:usedBy",
+          "value": "Edge gateway (vendor X) (tls)"
+        }
+      ]
+    },
+    {
+      "type": "cryptographic-asset",
+      "bom-ref": "crypto/algorithm/ml-dsa-65",
+      "name": "ML-DSA-65",
+      "cryptoProperties": {
+        "assetType": "algorithm",
+        "algorithmProperties": {
+          "primitive": "signature"
+        }
+      },
+      "properties": [
+        {
+          "name": "pqc:quantumVulnerable",
+          "value": "false"
+        },
+        {
+          "name": "pqc:usedBy",
+          "value": "Meter firmware channel (iot)"
+        }
+      ]
+    }
+  ]
+}

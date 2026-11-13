@@ -1,0 +1,17 @@
+{
+  "name": "pqc-readiness",
+  "version": "1.0.0",
+  "description": "Post-quantum readiness: cryptographic inventory from JSON, certificates and code, quantum-risk scoring against EU and NIST dates, CBOM and migration waves",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "pqc-readiness": "dist/src/cli.js" },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/src/server-main.js",
+    "test": "tsc && node --test dist/test/*.test.js"
+  },
+  "repository": "github:jvch0512/pqc-readiness",
+  "keywords": ["post-quantum", "pqc", "cbom", "cryptography", "nis2", "crypto-agility", "typescript"],
+  "devDependencies": { "@types/node": "^22.0.0", "typescript": "^5.6.0" },
+  "engines": { "node": ">=20" }
+}

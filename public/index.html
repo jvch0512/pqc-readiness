@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>pqc-readiness</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>pqc-readiness</h1>
+    <p class="sub">Paste a cryptographic inventory (JSON). Get quantum-risk scoring, harvest-now-decrypt-later flags, migration waves against the EU and NIST dates, and a CycloneDX CBOM. Runs in this tab, nothing is uploaded.</p>
+  </div>
+  <button type="button" id="sample">Load sample</button>
+</header>
+<main>
+  <div class="panel">
+    <h2>Inventory JSON</h2>
+    <textarea id="inv" rows="14" spellcheck="false"></textarea>
+    <p class="hint">Set <code>qDay</code> (default 2035) to your own assumption of when a cryptographically relevant quantum computer may exist. Certificates and code can be turned into inventory with the CLI (<code>certs</code>, <code>scan</code>).</p>
+  </div>
+  <div id="out"></div>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
